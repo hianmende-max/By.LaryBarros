@@ -60,11 +60,11 @@ section{padding:72px 0}
   transform:translateY(-3px);
   box-shadow:0 14px 30px rgba(74,44,32,.3);
   background:var(--brown-2);
-  color:#fff
+  color:#ffffff
 }
  
 .btn.sm{
-  padding:11px 20px;font-size:.9rem
+  padding:11px 20px;font-size:.9rem;
 }
  
 .btn.ghost{
