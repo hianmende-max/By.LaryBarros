@@ -1,16 +1,32 @@
 :root{
-  --bg:#ffffff; --surface:#f7f3f0; --ink:#2a1b14; --muted:#6f5d54;
-  --brown:#4a2c20; --brown-2:#7a4b36; --line:#e6dcd6; --on-brown:#ffffff;
+  --bg:#ffffff;
+  --surface:#f7f3f0;
+  --ink:#2a1b14;
+  --muted:#6f5d54;
+  --brown:#4a2c20;
+  --brown-2:#7a4b36;
+  --line:#e6dcd6;
+  --on-brown:#ffffff;
   --radius:18px;
-  --f-head:'Sora',system-ui,sans-serif; --f-body:'DM Sans',system-ui,sans-serif;
+  --f-head:'Sora',system-ui,sans-serif;
+  --f-body:'DM Sans',system-ui,sans-serif;
 }
+ 
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#1a110d; --surface:#251a15; --ink:#f4ece7; --muted:#b9a79d;
-    --brown:#e9d6cb; --brown-2:#c79a82; --line:#3a2a22; --on-brown:#2a1b14;
+    --bg:#1a110d;
+    --surface:#251a15;
+    --ink:#f4ece7;
+    --muted:#b9a79d;
+    --brown:#e9d6cb;
+    --brown-2:#c79a82;
+    --line:#3a2a22;
+    --on-brown:#2a1b14;
   }
+ 
 }
-html{scroll-behavior:smooth;scroll-padding-top:80px}
+html{scroll-behavior:smooth;
+scroll-padding-top:80px}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
 img,svg{max-width:100%;display:block}
@@ -25,12 +41,51 @@ section{padding:72px 0}
 .head p{margin-top:14px;color:var(--muted)}
  
 /* Botões */
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--brown);color:var(--on-brown);font-family:var(--f-head);font-weight:700;font-size:1rem;padding:16px 28px;border-radius:999px;border:0;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease;box-shadow:0 8px 22px rgba(74,44,32,.22)}
-.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(74,44,32,.3);background:var(--brown-2);color:#fff}
-.btn.sm{padding:11px 20px;font-size:.9rem}
-.btn.ghost{background:transparent;color:var(--ink);box-shadow:none;border:1.5px solid var(--line)}
-.btn.ghost:hover{background:var(--surface);color:var(--ink);border-color:var(--brown-2);box-shadow:none}
-.btn svg{width:20px;height:20px;fill:currentColor}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;background:var(--brown);
+  color:var(--on-brown);
+  font-family:var(--f-head);
+  font-weight:700;
+  font-size:1rem;
+  padding:16px 28px;
+  border-radius:999px;
+  border:0;cursor:pointer;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
+  box-shadow:0 8px 22px rgba(74,44,32,.22)
+}
+ 
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(74,44,32,.3);
+  background:var(--brown-2);
+  color:#fff
+}
+ 
+.btn.sm{
+  padding:11px 20px;font-size:.9rem
+}
+ 
+.btn.ghost{
+  background:transparent;
+  color:var(--ink);
+  box-shadow:none;
+  border:1.5px solid var(--line)
+}
+ 
+.btn.ghost:hover{
+  background:var(--surface);
+  color:var(--ink);
+  border-color:var(--brown-2);
+  box-shadow:none
+}
+ 
+.btn svg{
+  width:20px;
+  height:20px;
+  fill:currentColor
+}
  
 /* Header */
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -60,7 +115,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
   border-radius: 170px 170px 28px 28px;
   overflow: visible;
 }
-
+ 
 .portrait-frame {
   position: absolute;
   inset: 0;
@@ -68,7 +123,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
   border-radius: 170px 170px 28px 28px;
   background: var(--brown);
 }
-
+ 
 .portrait-photo {
   display: block;
   width: 100%;
@@ -76,7 +131,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
   object-fit: cover;
   object-position: 50% 28%;
 }
-
+ 
 .chip,
 .tag {
   z-index: 2;
@@ -113,7 +168,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .t5{background:linear-gradient(150deg,#a97a64,#4a2c20)}
 .t6{background:linear-gradient(150deg,#c9a592,#7a4b36)}
 @media(min-width:640px){.works{grid-template-columns:1fr 1fr}}
-@media(min-width:1000px){.works{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1000px){.works{grid-template-columns:repeat(4,1fr)}}
  
 /* Diferenciais */
 .why{background:var(--surface)}
@@ -125,7 +180,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .why-item h3{font-size:1.05rem;margin-bottom:4px}
 .why-item p{color:var(--muted);font-size:.98rem}
 @media(min-width:760px){.why-grid{grid-template-columns:1fr 1fr}}
-
+ 
 /*LOGO*/
 .logo img {
   display: block;
@@ -135,7 +190,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
   object-fit: contain;
   object-position: left center;
 }
-
+ 
 /* CTA */
 .cta{padding:72px 0 80px}
 .cta-box{background:var(--brown);color:var(--on-brown);border-radius:28px;padding:clamp(36px,7vw,64px);display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between}
@@ -289,12 +344,11 @@ font-size:1rem
 .lb-nav.prev{left:10px}.lb-nav.next{right:10px}
 @media(max-width:640px){.lb-stage{padding:60px 12px 4px}.lb-nav{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));margin:0}.lb-cap{padding-bottom:calc(70px + env(safe-area-inset-bottom,0px))}}
  
+
 /* ===== Posts em carrossel (estilo Instagram) ===== */
-.posts{display:grid;gap:28px;grid-template-columns:1fr;align-items:start}
-@media(min-width:760px){.posts{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}}
 .post{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .3s ease,border-color .3s ease;min-width:0}
 .post:hover{box-shadow:0 18px 38px rgba(74,44,32,.14);border-color:var(--brown-2)}
-.pmedia{position:relative;aspect-ratio:4/5;background:#2a1b14}
+.pmedia{position:relative;aspect-ratio:3/5;background:#2a1b14}
 .car{display:flex;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab;outline-offset:-3px}
 .car::-webkit-scrollbar{display:none}
 .car.drag{scroll-snap-type:none;scroll-behavior:auto;cursor:grabbing}
@@ -341,7 +395,6 @@ place-items:center;padding:0
 /* ===== Estética dos cards: etiqueta, título, descrição e divisória ===== */
 :root{--ratio:4/5}            /* troque por 1/1 para foto quadrada */
 .pmedia{aspect-ratio:var(--ratio)}
-.posts{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),350px));justify-content:center;gap:26px}
 .post{border-radius:var(--radius)}
 .work-head{padding:12px 16px}
 .pdots{padding:12px 0 0}
@@ -353,3 +406,90 @@ place-items:center;padding:0
 .post-body .sbar{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
 .post-body .sbar button{padding:6px 8px}
  
+/* ===== Marcas atendidas ===== */
+.brands{background:var(--surface)}
+.why{background:var(--bg)}
+.why-item{background:var(--surface)}
+.brand-grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:560px){.brand-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.brand-grid{grid-template-columns:repeat(5,1fr)}}
+.brand{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:32px 24px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.brand:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(74,44,32,.14);border-color:var(--brown-2)}
+.brand-logo{width:112px;height:112px;border-radius:50%;box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--brown-2);transition:transform .35s ease}
+.brand:hover .brand-logo{transform:scale(1.07) rotate(-3deg)}
+.brand h3{font-size:1.15rem;margin-top:6px}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;list-style:none;margin:0;padding:0}
+.tags li{font-size:.82rem;font-weight:500;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+ 
+/* Marcas no celular: faixa que desliza para o lado (só até 559px) */
+@media(max-width:559px){
+  .brand-grid{
+    display:flex;gap:14px;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;scroll-padding-inline:20px;
+    margin:-8px -20px;padding:8px 20px 16px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
+  }
+  .brand-grid::-webkit-scrollbar{display:none}
+  .brand{flex:0 0 76%;scroll-snap-align:start;min-height:100%}
+}
+ 
+/* ===== Serviços: 6 cartões = 1 coluna no celular, 2 no tablet, 3 no computador ===== */
+.cards{gap:22px}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.cards .card{display:flex;flex-direction:column;padding:32px 28px}
+.cards .card h3{font-size:1.15rem}
+.cards .card p{line-height:1.6}
+ 
+/* =====================================================================
+   AJUSTES FINAIS: 3 posts por linha e layout responsivo
+   ===================================================================== */
+ 
+/* --- Tela larga / zoom out: o conteúdo cresce junto com a janela --- */
+html{font-size:max(100%,calc(8px + .62vw))}
+.wrap{width:min(80rem,100% - 40px)}
+.portrait{width:min(clamp(340px,19vw,680px),82vw)}
+ 
+/* --- Portfólio: 3 posts por linha --- */
+.posts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  justify-content: stretch;
+  align-items: start;
+}
+
+@media (min-width: 760px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1180px) {
+  .pc-desc { min-height: 4.65em; }
+}
+
+.post-body{padding:12px 18px 18px}
+.post.single .pcount{display:none}
+.post.single .pdots{visibility:hidden}   /* mantém a altura igual à dos outros posts */
+ 
+/* --- Mais leve: sem desfoque pesado, sem repintar o cabeçalho a cada rolagem --- */
+header{backdrop-filter:none;-webkit-backdrop-filter:none;background:color-mix(in srgb,var(--bg) 96%,transparent)}
+.pslide.contain{background-size:cover;background-position:center;background-color:#8a8a8a;background-blend-mode:multiply}
+.pslide.contain .bgimg{display:none}
+.pslide.contain .fg{object-fit:contain}
+/* seções fora da tela não são desenhadas até chegar perto */
+.stats,.demo,#portfolio,.brands,.why,.cta,footer{content-visibility:auto;contain-intrinsic-size:auto 800px}
+ 
+/* --- Padrão no celular: listas de cartões viram faixa que desliza para o lado (até 559px) --- */
+@media(max-width:559px){
+  .brand-grid,.cards,.why-grid{
+    display:flex;gap:14px;
+    overflow-x:auto;overflow-y:hidden;
+    scroll-snap-type:x mandatory;scroll-padding-inline:20px;
+    margin:-8px -20px;padding:8px 20px 16px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;
+  }
+  .brand-grid::-webkit-scrollbar,.cards::-webkit-scrollbar,.why-grid::-webkit-scrollbar{display:none}
+  .brand-grid>*,.cards>*,.why-grid>*{flex:0 0 78%;scroll-snap-align:start}
+}
