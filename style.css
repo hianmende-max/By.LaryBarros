@@ -282,7 +282,19 @@ font-size:1rem
 .poll button:hover{transform:scale(1.03)}
 .poll button .bar{position:absolute;inset:0 auto 0 0;width:0;background:rgba(122,75,54,.25);transition:width .8s ease}
 .poll button span{position:relative;display:flex;justify-content:space-between}
-.sl4 .btn{position:relative;z-index:3;pointer-events:auto;justify-self:center;background:#fff;color:var(--brown)}
+.sl4 .btn {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+  justify-self: center;
+  background: #fff;
+  color: #2a1b14; /* Marrom bem escuro da sua paleta (--ink) para dar leitura perfeita no branco */
+}
+
+.sl4 .btn:hover {
+  background: #f7f3f0; /* Creme suave (--surface) ao passar o mouse */
+  color: #1a110d;      /* Tom mais profundo da sua paleta */
+}
 .slide.on .btn{pointer-events:auto}
 @media(min-width:900px){.demo-grid{grid-template-columns:1fr 1fr}}
  
