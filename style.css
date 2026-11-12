@@ -23,10 +23,9 @@
     --line:#3a2a22;
     --on-brown:#2a1b14;
   }
- 
 }
-html{scroll-behavior:smooth;
-scroll-padding-top:80px}
+
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
 img,svg{max-width:100%;display:block}
@@ -44,14 +43,16 @@ section{padding:72px 0}
 .btn{
   display:inline-flex;
   align-items:center;
-  gap:10px;background:var(--brown);
+  gap:10px;
+  background:var(--brown);
   color:var(--on-brown);
   font-family:var(--f-head);
   font-weight:700;
   font-size:1rem;
   padding:16px 28px;
   border-radius:999px;
-  border:0;cursor:pointer;
+  border:0;
+  cursor:pointer;
   transition:transform .25s ease,box-shadow .25s ease,background .25s ease;
   box-shadow:0 8px 22px rgba(74,44,32,.22)
 }
@@ -64,7 +65,8 @@ section{padding:72px 0}
 }
  
 .btn.sm{
-  padding:11px 20px;font-size:.9rem;
+  padding:11px 20px;
+  font-size:.9rem;
 }
  
 .btn.ghost{
@@ -90,7 +92,8 @@ section{padding:72px 0}
 /* Header */
 header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;font-size:1.15rem}.logo img{display:block;width:176px;height:auto;max-height:48px;object-fit:contain;object-position:left center}
+.logo{display:flex;align-items:center;font-size:1.15rem}
+.logo img{display:block;width:176px;height:auto;max-height:48px;object-fit:contain;object-position:left center}
 .logo-mark{width:36px;height:36px;border-radius:11px;background:var(--brown);color:var(--on-brown);display:grid;place-items:center;font-size:.95rem}
 .menu{display:none;gap:30px;font-weight:500;color:var(--muted)}
 .menu a{transition:color .2s}
@@ -181,7 +184,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .why-item p{color:var(--muted);font-size:.98rem}
 @media(min-width:760px){.why-grid{grid-template-columns:1fr 1fr}}
  
-/*LOGO*/
+/* LOGO */
 .logo img {
   display: block;
   width: 176px;
@@ -199,15 +202,9 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .cta-box .btn:hover{background:var(--surface);color:var(--brown)}
  
 /* Footer */
-footer{border-top:1px solid var(--line);
-  padding:48px 0 32px;
-  background:var(--surface)
-}
+footer{border-top:1px solid var(--line);padding:48px 0 32px;background:var(--surface)}
 .foot{display:grid;gap:32px}
-.foot h4{font-family:var(--f-head);
-margin:0 0 12px;
-font-size:1rem
-}
+.foot h4{font-family:var(--f-head);margin:0 0 12px;font-size:1rem}
 .foot p,.foot a.l{color:var(--muted);font-size:.98rem}
 .foot a.l{display:block;padding:3px 0;transition:color .2s}
 .foot a.l:hover{color:var(--ink)}
@@ -254,48 +251,344 @@ font-size:1rem
 .steps button.on .n{background:var(--brown);color:var(--on-brown)}
 .steps strong{display:block;font-family:var(--f-head);font-size:1rem}
 .steps small{color:var(--muted);font-size:.92rem}
-.sphone{width:min(300px,80vw);aspect-ratio:9/16;margin-inline:auto;border-radius:36px;padding:10px;background:var(--brown);box-shadow:0 30px 60px rgba(74,44,32,.28)}
-.sscreen{position:relative;height:100%;border-radius:28px;overflow:hidden;color:#fff;background:#2a1b14}
-.sbars{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:5px;z-index:4}
-.sbars i{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.35);overflow:hidden}
+
+/* ===== Celular Realista & Stories com Artes ===== */
+.sphone{
+  position:relative;
+  width:min(320px,84vw);
+  aspect-ratio:9/19;
+  margin-inline:auto;
+  border-radius:48px;
+  padding:11px;
+  background:linear-gradient(145deg,#3b2820,#170f0c 55%,#2e1e17);
+  box-shadow:
+    inset 0 0 0 2px rgba(255,255,255,.16),
+    inset 0 0 6px 2px rgba(0,0,0,.8),
+    0 32px 64px -12px rgba(42,27,20,.42),
+    0 12px 24px -8px rgba(42,27,20,.25);
+}
+
+/* Botões físicos laterais */
+.hw-btn{
+  position:absolute;
+  width:3px;
+  background:linear-gradient(180deg,#5a4035,#241712);
+  border-radius:3px;
+}
+.hw-btn.vol-up{left:-3px;top:115px;height:36px}
+.hw-btn.vol-down{left:-3px;top:162px;height:36px}
+.hw-btn.power{right:-3px;top:132px;height:54px}
+
+.sscreen{
+  position:relative;
+  height:100%;
+  border-radius:38px;
+  overflow:hidden;
+  color:#fff;
+  background:#1a110d;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+  user-select:none;
+  -webkit-user-select:none;
+}
+
+/* Dynamic Island */
+.island{
+  position:absolute;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  width:88px;
+  height:22px;
+  background:#090605;
+  border-radius:999px;
+  z-index:6;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  padding-right:7px;
+  box-shadow:0 1px 3px rgba(0,0,0,.5);
+}
+.island .cam{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 35%,#3b5998,#0d1326 60%,#000);
+  box-shadow:inset 0 0 2px rgba(255,255,255,.35);
+}
+
+/* Barras de progresso */
+.sbars{
+  position:absolute;
+  top:40px;
+  left:12px;
+  right:12px;
+  display:flex;
+  gap:4px;
+  z-index:5;
+}
+.sbars i{
+  flex:1;
+  height:2.5px;
+  border-radius:3px;
+  background:rgba(255,255,255,.32);
+  overflow:hidden;
+}
 .sbars i::after{content:"";display:block;height:100%;width:0;background:#fff}
 .sbars i.done::after{width:100%}
 .sbars i.act::after{animation:fill var(--dur,5s) linear forwards}
 .paused .sbars i.act::after{animation-play-state:paused}
 @keyframes fill{to{width:100%}}
-.shead{position:absolute;top:26px;left:14px;display:flex;align-items:center;gap:8px;z-index:4;font-size:.8rem;font-weight:700}
-.shead img{width:28px;height:28px;border-radius:50%;object-fit:cover;background:var(--on-brown)}
-.shead em{font-style:normal;opacity:.7;font-weight:500}
-.slide{position:absolute;inset:0;display:grid;place-content:center;gap:14px;text-align:center;padding:70px 24px 40px;opacity:0;transform:scale(1.04);transition:opacity .4s,transform .4s;pointer-events:none}
+
+/* Cabeçalho do Story */
+.shead{
+  position:absolute;
+  top:50px;
+  left:12px;
+  right:12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index:5;
+  font-size:.78rem;
+  transition:opacity .2s;
+}
+.suser{display:flex;align-items:center;gap:8px;font-weight:700;text-shadow:0 1px 4px rgba(0,0,0,.4)}
+.savatar{
+  position:relative;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  padding:1.5px;
+  background:linear-gradient(45deg,#f7d9c4,#c79a82,#7a4b36);
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.savatar img{position:absolute;inset:1.5px;width:calc(100% - 3px);height:calc(100% - 3px);border-radius:50%;object-fit:cover;z-index:2}
+.savatar i{font-style:normal;font-size:.68rem;font-family:var(--f-head);background:#2a1b14;width:100%;height:100%;border-radius:50%;display:grid;place-items:center}
+.shead em{font-style:normal;opacity:.75;font-weight:400;font-size:.74rem}
+.sicons{display:flex;align-items:center;gap:10px;opacity:.9;font-size:.85rem}
+.sclose{font-size:1rem;line-height:1}
+
+/* Slides e Fundos Artísticos */
+.slide{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  text-align:center;
+  padding:88px 20px 68px;
+  opacity:0;
+  transform:scale(1.04);
+  transition:opacity .4s ease,transform .4s ease;
+  pointer-events:none;
+  overflow:hidden;
+}
 .slide.on{opacity:1;transform:none}
-.slide h3{color:#fff;font-size:1.6rem}
-.slide p{font-size:1rem;opacity:.92}
-.slide .big{font-size:3rem}
-.sl1{background:linear-gradient(160deg,#c9a592,#6a3d2b)}
-.sl2{background:linear-gradient(160deg,#8d5a44,#2a1b14)}
-.sl3{background:linear-gradient(160deg,#a97a64,#4a2c20)}
-.sl4{background:linear-gradient(160deg,#4a2c20,#1a110d)}
-.tap{position:absolute;top:0;bottom:0;width:40%;z-index:2;background:none;border:0;cursor:pointer}
-.tap.l{left:0}.tap.r{right:0;width:60%}
-.poll{display:grid;gap:10px;position:relative;z-index:3;pointer-events:auto}
-.poll button{position:relative;overflow:hidden;background:rgba(255,255,255,.92);color:#2a1b14;border:0;border-radius:14px;padding:13px 16px;font:700 .95rem var(--f-body);cursor:pointer;text-align:left;transition:transform .2s}
-.poll button:hover{transform:scale(1.03)}
-.poll button .bar{position:absolute;inset:0 auto 0 0;width:0;background:rgba(122,75,54,.25);transition:width .8s ease}
-.poll button span{position:relative;display:flex;justify-content:space-between}
-.sl4 .btn {
-  position: relative;
-  z-index: 3;
-  pointer-events: auto;
-  justify-self: center;
-  background: #fff;
-  color: #2a1b14; /* Marrom bem escuro da sua paleta (--ink) para dar leitura perfeita no branco */
+.slide h3{color:#fff;font-size:1.35rem;line-height:1.2;position:relative;z-index:2}
+.slide p{font-size:.9rem;line-height:1.45;opacity:.92;position:relative;z-index:2}
+.slide .big{font-size:2.4rem;line-height:1;margin-bottom:4px}
+
+/* Camada de Arte de Fundo */
+.art-bg{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+
+/* Slide 1: Gancho (Editorial Creme & Terracota) */
+.sl1{background:linear-gradient(155deg,#b88670 0%,#6d3f2c 52%,#2a1811 100%)}
+.sl1 .grid-lines{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);
+  background-size:28px 28px;
+  mask-image:radial-gradient(circle at center,#000 35%,transparent 85%);
+}
+.sl1 .blob{position:absolute;border-radius:50%;filter:blur(28px);opacity:.65;animation:floatArt 7s ease-in-out infinite}
+.sl1 .b1{width:190px;height:190px;background:#f3cbb8;top:-30px;right:-40px}
+.sl1 .b2{width:170px;height:170px;background:#3a1d12;bottom:20px;left:-40px;animation-delay:-3s}
+
+/* Slide 2: Bastidores (Polaroids e estética de câmera) */
+.sl2{background:linear-gradient(165deg,#4f3124 0%,#24150f 65%,#120a07 100%)}
+.polaroid-stack{position:absolute;inset:0}
+.pol{
+  position:absolute;
+  width:155px;
+  height:185px;
+  background:#f7f3f0;
+  padding:8px 8px 28px;
+  border-radius:10px;
+  box-shadow:0 16px 32px rgba(0,0,0,.45);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+.pol::before{
+  content:"";
+  position:absolute;
+  inset:8px 8px 30px;
+  border-radius:6px;
+}
+.pol span{position:relative;color:#2a1b14;font:700 .65rem var(--f-head);letter-spacing:.03em}
+.pol.p1{top:68px;left:-18px;transform:rotate(-11deg);opacity:.38}
+.pol.p1::before{background:linear-gradient(135deg,#c9a592,#7a4b36)}
+.pol.p2{bottom:64px;right:-16px;transform:rotate(9deg);opacity:.38}
+.pol.p2::before{background:linear-gradient(135deg,#8d5a44,#3b2218)}
+
+.rec-badge{
+  position:relative;z-index:2;
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,0,0,.48);
+  border:1px solid rgba(255,255,255,.2);
+  padding:5px 12px;border-radius:999px;
+  font:700 .68rem var(--f-head);letter-spacing:.06em;
+}
+.rec-dot{width:7px;height:7px;border-radius:50%;background:#ff4d4d;animation:ping 1.4s infinite}
+
+/* Slide 3: Enquete Interativa */
+.sl3{background:linear-gradient(150deg,#9c6b54 0%,#593526 55%,#271610 100%)}
+.sl3 .ring{
+  position:absolute;border-radius:50%;
+  border:1px solid rgba(255,255,255,.14);
+  left:50%;top:50%;transform:translate(-50%,-50%);
+}
+.sl3 .r1{width:230px;height:230px}
+.sl3 .r2{width:330px;height:330px}
+.poll-hint{position:relative;z-index:2;font-size:.74rem;opacity:.75}
+
+/* Slide 4: Convite / Conversão */
+.sl4{background:linear-gradient(160deg,#5e3828 0%,#2b1912 60%,#140c09 100%)}
+.sl4 .glow{
+  position:absolute;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(233,214,203,.32),transparent 70%);
+  top:20%;left:50%;transform:translateX(-50%);
+}
+.chat-preview{position:absolute;top:92px;left:16px;right:16px;display:flex;justify-content:flex-end;opacity:.45}
+.msg-bubble{
+  background:#dcf8c6;color:#1a110d;
+  font-size:.7rem;font-weight:700;
+  padding:7px 12px;border-radius:14px 14px 2px 14px;
+  transform:rotate(2deg);
 }
 
-.sl4 .btn:hover {
-  background: #f7f3f0; /* Creme suave (--surface) ao passar o mouse */
-  color: #1a110d;      /* Tom mais profundo da sua paleta */
+/* Garante que o botão do último slide fique acima das áreas de toque */
+.slide.on .glass-card{
+  position:relative;
+  z-index:4;
 }
+
+/* Elementos internos dos Stories (Stickers e Glass Cards) */
+.sticker-pill{
+  position:relative;z-index:2;
+  background:#fff;color:#2a1b14;
+  font:800 .68rem var(--f-head);
+  letter-spacing:.05em;
+  padding:5px 12px;
+  border-radius:999px;
+  box-shadow:0 6px 16px rgba(0,0,0,.22);
+  transform:rotate(-2deg);
+}
+.sticker-tag{
+  position:relative;z-index:2;
+  background:rgba(255,255,255,.16);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(255,255,255,.28);
+  padding:6px 14px;border-radius:999px;
+  font-size:.76rem;font-weight:700;
+}
+.glass-card{
+  position:relative;z-index:2;
+  width:100%;
+  background:rgba(255,255,255,.13);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:22px;
+  padding:20px 16px;
+  display:grid;
+  gap:10px;
+  box-shadow:0 16px 32px rgba(0,0,0,.22);
+}
+.glass-card.dark{background:rgba(20,12,9,.45)}
+
+@keyframes floatArt{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(-12px,16px) scale(1.08)}
+}
+
+/* Áreas de toque */
+.tap{position:absolute;top:0;bottom:56px;width:38%;z-index:3;background:none;border:0;cursor:pointer}
+.tap.l{left:0}.tap.r{right:0;width:62%}
+
+/* Enquete */
+.poll{display:grid;gap:9px;width:100%;position:relative;z-index:4;pointer-events:auto}
+.poll button{
+  position:relative;overflow:hidden;
+  background:rgba(255,255,255,.95);color:#2a1b14;
+  border:0;border-radius:14px;padding:12px 14px;
+  font:700 .86rem var(--f-body);cursor:pointer;text-align:left;
+  box-shadow:0 8px 20px rgba(0,0,0,.2);
+  transition:transform .2s;
+}
+.poll button:hover{transform:scale(1.02)}
+.poll button .bar{position:absolute;inset:0 auto 0 0;width:0;background:rgba(122,75,54,.28);transition:width .8s ease}
+.poll button span{position:relative;display:flex;justify-content:space-between;align-items:center}
+
+/* Botão CTA dentro do Story */
+.sl4 .btn{
+  position:relative;z-index:4;
+  pointer-events:none;
+  justify-self:center;
+  margin-top:4px;
+  background:#fff;
+  color:#2a1b14;
+  font-size:.86rem;
+  padding:11px 18px;
+}
+.sl4 .btn:hover{background:#f7f3f0;color:#1a110d}
 .slide.on .btn{pointer-events:auto}
+
+/* Rodapé estilo Instagram Story */
+.sfoot{
+  position:absolute;
+  bottom:18px;
+  left:12px;
+  right:12px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  z-index:5;
+  transition:opacity .2s;
+}
+.sreply{
+  flex:1;
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:999px;
+  padding:7px 14px;
+  font-size:.75rem;
+  color:rgba(255,255,255,.85);
+  background:rgba(0,0,0,.18);
+}
+.sfoot svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8;flex:none}
+
+/* Barra Home inferior do smartphone */
+.home-bar{
+  position:absolute;
+  bottom:6px;
+  left:50%;
+  transform:translateX(-50%);
+  width:104px;
+  height:4px;
+  border-radius:999px;
+  background:rgba(255,255,255,.75);
+  z-index:6;
+}
+
+/* Estado pausado ao segurar a tela */
+.sscreen.paused .shead,
+.sscreen.paused .sfoot{opacity:.25}
+
 @media(min-width:900px){.demo-grid{grid-template-columns:1fr 1fr}}
  
 .work-head{display:flex;align-items:center;gap:10px;padding:14px 18px;font-size:.92rem}
@@ -323,7 +616,7 @@ font-size:1rem
  
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.track,.chip,.dot::after,.fab::after{animation:none!important}.reveal{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.track,.chip,.dot::after,.fab::after,.sl1 .blob,.rec-dot{animation:none!important}.reveal{opacity:1;transform:none}}
  
 /* ===== Portfólio com fotos e vídeos ===== */
 .filters{display:flex;flex-wrap:wrap;gap:10px;margin:-14px 0 30px}
@@ -356,7 +649,6 @@ font-size:1rem
 .lb-nav.prev{left:10px}.lb-nav.next{right:10px}
 @media(max-width:640px){.lb-stage{padding:60px 12px 4px}.lb-nav{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px));margin:0}.lb-cap{padding-bottom:calc(70px + env(safe-area-inset-bottom,0px))}}
  
-
 /* ===== Posts em carrossel (estilo Instagram) ===== */
 .post{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:box-shadow .3s ease,border-color .3s ease;min-width:0}
 .post:hover{box-shadow:0 18px 38px rgba(74,44,32,.14);border-color:var(--brown-2)}
@@ -376,17 +668,7 @@ font-size:1rem
 .parr.prev{left:10px}.parr.next{right:10px}
 .pmedia:hover .parr,.parr:focus-visible{opacity:1}
 @media(hover:none){.parr{opacity:.85}}
-.pvol{position:absolute;
-right:12px;bottom:12px;width:38px;height:38px;
-border-radius:50%;
-border:0;
-background:rgba(0,0,0,.6);
-font-size:1.05rem;
-cursor:pointer;
-z-index:2;
-display:none;
-place-items:center;padding:0
-}
+.pvol{position:absolute;right:12px;bottom:12px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.6);font-size:1.05rem;cursor:pointer;z-index:2;display:none;place-items:center;padding:0}
 .post[data-vid="1"] .pvol{display:grid}
 .pdots{display:flex;justify-content:center;gap:7px;padding:14px 0 4px}
 .pdots button{position:relative;width:7px;height:7px;border-radius:50%;border:0;padding:0;background:var(--line);cursor:pointer;transition:background .2s,transform .2s}
@@ -405,7 +687,7 @@ place-items:center;padding:0
 .pslide.contain .bgimg{filter:blur(24px) brightness(.45) saturate(.8)}
  
 /* ===== Estética dos cards: etiqueta, título, descrição e divisória ===== */
-:root{--ratio:4/5}            /* troque por 1/1 para foto quadrada */
+:root{--ratio:4/5}
 .pmedia{aspect-ratio:var(--ratio)}
 .post{border-radius:var(--radius)}
 .work-head{padding:12px 16px}
@@ -457,12 +739,10 @@ place-items:center;padding:0
    AJUSTES FINAIS: 3 posts por linha e layout responsivo
    ===================================================================== */
  
-/* --- Tela larga / zoom out: o conteúdo cresce junto com a janela --- */
 html{font-size:max(100%,calc(8px + .62vw))}
 .wrap{width:min(80rem,100% - 40px)}
 .portrait{width:min(clamp(340px,19vw,680px),82vw)}
  
-/* --- Portfólio: 3 posts por linha --- */
 .posts {
   display: grid;
   grid-template-columns: 1fr;
@@ -483,17 +763,14 @@ html{font-size:max(100%,calc(8px + .62vw))}
 
 .post-body{padding:12px 18px 18px}
 .post.single .pcount{display:none}
-.post.single .pdots{visibility:hidden}   /* mantém a altura igual à dos outros posts */
+.post.single .pdots{visibility:hidden}
  
-/* --- Mais leve: sem desfoque pesado, sem repintar o cabeçalho a cada rolagem --- */
 header{backdrop-filter:none;-webkit-backdrop-filter:none;background:color-mix(in srgb,var(--bg) 96%,transparent)}
 .pslide.contain{background-size:cover;background-position:center;background-color:#8a8a8a;background-blend-mode:multiply}
 .pslide.contain .bgimg{display:none}
 .pslide.contain .fg{object-fit:contain}
-/* seções fora da tela não são desenhadas até chegar perto */
 .stats,.demo,#portfolio,.brands,.why,.cta,footer{content-visibility:auto;contain-intrinsic-size:auto 800px}
  
-/* --- Padrão no celular: listas de cartões viram faixa que desliza para o lado (até 559px) --- */
 @media(max-width:559px){
   .brand-grid,.cards,.why-grid{
     display:flex;gap:14px;

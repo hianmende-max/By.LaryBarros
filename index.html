@@ -15,7 +15,7 @@
  
 <header>
   <div class="wrap nav">
-    <a href="#topo" class="logo" aria-label="By.LaryBarros"><img src="image/logo-creme.png" alt="By Lary Barros">
+    <a href="#topo" class="logo" aria-label="By.LaryBarros"><img src="image/logo-creme.png" alt="By Lary Barros"></a>
     <nav class="menu" aria-label="Principal">
       <a href="#servicos">Serviços</a>
       <a href="#portfolio">Portfólio</a>
@@ -33,7 +33,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="hello">Oi, eu sou a Lary Barros</p>
+        <p class="hello">Oi, eu sou a Laryssa Barros</p>
         <h1>Dou vida à sua marca nas redes</h1>
         <p class="now"><span class="dot"></span>Criando agora para: <b id="rot">Stories</b></p>
         <p class="bio">Trabalho com criação de conteúdo, audiovisual e design. Desenvolvo materiais para redes sociais, desde a captação de imagens e produção de Stories até a edição de vídeos e criação de peças gráficas. Cada projeto é desenvolvido considerando a proposta, a identidade e a necessidade de comunicação de cada cliente.</p>
@@ -41,7 +41,8 @@
         <ul class="facts">
           <li>Captação mobile</li>
           <li>Funis nos Stories</li>
-          <li>Entrega no mesmo dia</li>
+          <li>entrega rápida</li>
+          <li>Produção com câmera</li>
         </ul>
         <div class="actions">
           <a class="btn" href="https://wa.me/5579996889650" target="_blank" rel="noopener">
@@ -113,8 +114,8 @@
   <section class="stats">
     <div class="wrap stat-grid">
       <!-- EDITE os números abaixo com os resultados reais -->
-      <div class="stat reveal"><b><span data-count="50">0</span>+</b><span>marcas atendidas</span></div>
-      <div class="stat reveal"><b><span data-count="1000">0</span>+</b><span>Stories criados</span></div>
+      <div class="stat reveal"><b><span data-count="10">0</span>+</b><span>marcas atendidas</span></div>
+      <div class="stat reveal"><b><span data-count="500">0</span>+</b><span>Stories criados</span></div>
       <div class="stat reveal"><b><span data-count="100">0</span>%</b><span>produzido no mobile</span></div>
     </div>
   </section>
@@ -132,23 +133,114 @@
           <li><button type="button"><span class="n">4</span><span><strong>Convite</strong><small>Chamada direta para o WhatsApp.</small></span></button></li>
         </ol>
       </div>
-      <div class="sphone reveal" id="sphone">
+    <div class="sphone reveal" id="sphone" aria-label="Simulação interativa de Stories no celular">
+        <!-- Botões físicos laterais -->
+        <span class="hw-btn vol-up" aria-hidden="true"></span>
+        <span class="hw-btn vol-down" aria-hidden="true"></span>
+        <span class="hw-btn power" aria-hidden="true"></span>
+
         <div class="sscreen" id="sscreen">
+          <!-- Dynamic Island -->
+          <div class="island" aria-hidden="true"><span class="cam"></span></div>
+
+          <!-- Barras de progresso -->
           <div class="sbars" id="sbars"><i></i><i></i><i></i><i></i></div>
-          <div class="shead"><i>LB</i>bylarybarros <em>agora</em></div>
-          <div class="slide sl1 on"><div class="big">👀</div><h3>Pare de rolar. Isso é para você.</h3><p>Sua marca merece ser vista.</p></div>
-          <div class="slide sl2"><div class="big">🎬</div><h3>Bastidores reais, sem filtro</h3><p>É assim que a confiança nasce.</p></div>
-          <div class="slide sl3"><h3>Você posta com frequência?</h3>
+
+          <!-- Topo estilo Instagram -->
+          <div class="shead">
+            <div class="suser">
+              <span class="savatar">
+                <img src="image/lary.jpg" alt="" onerror="this.remove()">
+                <i>LB</i>
+              </span>
+              <span class="sname">bylarybarros</span>
+              <em>2 h</em>
+            </div>
+            <div class="sicons" aria-hidden="true">
+              <span>•••</span>
+              <span class="sclose">✕</span>
+            </div>
+          </div>
+
+          <!-- SLIDE 1: Gancho -->
+          <div class="slide sl1 on">
+            <div class="art-bg" aria-hidden="true">
+              <span class="blob b1"></span>
+              <span class="blob b2"></span>
+              <div class="grid-lines"></div>
+            </div>
+            <div class="sticker-pill">✨ ALERTA DE CONTEÚDO</div>
+            <div class="glass-card">
+              <div class="big">👀</div>
+              <h3>Pare de rolar. Isso é para você.</h3>
+              <p>Se o seu perfil parece parado, o problema não é o algoritmo — é falta de narrativa.</p>
+            </div>
+            <span class="sticker-tag">Arrasta pro lado ➔</span>
+          </div>
+
+          <!-- SLIDE 2: Bastidores -->
+          <div class="slide sl2">
+            <div class="art-bg" aria-hidden="true">
+              <div class="polaroid-stack">
+                <div class="pol p1"><span>REC ● 00:14</span></div>
+                <div class="pol p2"><span>Bastidores reais</span></div>
+              </div>
+            </div>
+            <div class="rec-badge"><span class="rec-dot"></span> CAPTAÇÃO MOBILE</div>
+            <div class="glass-card dark">
+              <div class="big">🎬</div>
+              <h3>Bastidores reais, sem filtro</h3>
+              <p>Pessoas conectam com pessoas. Mostrar o processo gera autoridade imediata.</p>
+            </div>
+          </div>
+
+          <!-- SLIDE 3: Interação -->
+          <div class="slide sl3">
+            <div class="art-bg" aria-hidden="true">
+              <span class="ring r1"></span>
+              <span class="ring r2"></span>
+            </div>
+            <div class="sticker-pill">📊 QUERO SABER</div>
+            <h3>Você posta Stories com frequência?</h3>
             <div class="poll" id="poll">
-              <button type="button" data-v="78"><i class="bar"></i><span>Sempre <b></b></span></button>
-              <button type="button" data-v="22"><i class="bar"></i><span>Quase nunca <b></b></span></button>
-            </div></div>
-          <div class="slide sl4"><div class="big">💬</div><h3>Bora criar algo juntos?</h3><a class="btn sm" href="https://wa.me/5579996889650" target="_blank" rel="noopener">Vamos criar algo?</a></div>
+              <button type="button" data-v="78"><i class="bar"></i><span>🔥 Sim, quase todo dia <b></b></span></button>
+              <button type="button" data-v="22"><i class="bar"></i><span>😅 Só quando dá tempo <b></b></span></button>
+            </div>
+            <small class="poll-hint">Toque para votar na enquete</small>
+          </div>
+
+         <!-- SLIDE 4: Convite -->
+          <div class="slide sl4">
+            <div class="art-bg" aria-hidden="true">
+              <span class="glow"></span>
+              <div class="chat-preview">
+                <div class="msg-bubble">Oi Lary! Quero movimentar meu perfil ✨</div>
+              </div>
+            </div>
+            <div class="sticker-pill">🚀 PRÓXIMO PASSO</div>
+            <div class="glass-card">
+              <div class="big">💬</div>
+              <h3>Bora criar algo juntos?</h3>
+              <p>Conteúdo estratégico captado e entregue no mesmo dia.</p>
+              <a class="btn sm" href="https://wa.me/5579996889650?text=Oi%20Lary!%20Vi%20seu%20funil%20de%20Stories%20no%20portf%C3%B3lio%20e%20quero%20criar%20algo%20juntos!" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            </div>
+          </div>
+
+          <!-- Áreas de toque (Anterior / Próximo) -->
           <button class="tap l" id="prev" aria-label="Story anterior"></button>
           <button class="tap r" id="next" aria-label="Próximo story"></button>
+
+          <!-- Rodapé estilo Instagram Story -->
+          <div class="sfoot" aria-hidden="true">
+            <div class="sreply">Enviar mensagem...</div>
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9.5A5 5 0 0 1 12 6a5 5 0 0 1 9 5.5C19 16.5 12 21 12 21Z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M22 3 11 14M22 3l-7 18-4-7-7-4 18-7Z"/></svg>
+          </div>
+
+          <!-- Barra Home do celular -->
+          <div class="home-bar" aria-hidden="true"></div>
         </div>
       </div>
-    </div>
   </section>
  
   <!-- PORTFÓLIO -->
@@ -303,13 +395,13 @@
         </div>
       </article>
       <article class="post" data-title="Designs para redes sociais">
-        <div class="work-head"><span class="av"></span><b>@bylarybarros</b><em>Fotografias</em></div>
+        <div class="work-head"><span class="av"></span><b>@bylarybarros</b><em>Designs</em></div>
         <div class="pmedia">
           <div class="car" tabindex="0" aria-label="Carrossel: Designs para redes sociais">
-            <div class="pslide" data-type="foto" data-src="image/design_sc.png" data-alt="Design para apresentação do esporte para seguidores novos" data-cap="Apresentação do esporte" data-desc="Retrato de grupo do time inteiro, com a rede ao fundo."><img class="fg" src="image/design_sc.png" width="1500" height="1000" loading="lazy" decoding="async" alt="Foto do time de vôlei reunido na quadra, com a rede ao fundo"></div>
-            <div class="pslide" data-type="foto" data-src="image/design_sc2.png" data-alt="Posst para aquisição de novos patrocinadores" data-cap="Propaganda para aquisição de patrocinio" data-desc="Design com foco em atrair patrocinhos novos para o clube."><img src="image/design_sc2.png" width="1000" height="1500" loading="lazy" decoding="async" alt="Jogadora em pé na quadra, olhando para o lado" style="object-position:50% 38%"></div>
-            <div class="pslide" data-type="foto" data-src="image/design_dia_da_mulher.png" data-alt="Ação para promover o dia da mulher" data-cap="Dia das mulheres" data-desc="Ação para celebrar o dia das mulheres."><img src="image/design_dia_da_mulher.png" width="1000" height="1500" loading="lazy" decoding="async" alt="Ação para celebrar o dia das mulheres." style="object-position:50% 62%"></div>
-            <div class="pslide" data-type="foto" data-src="image/design_nuseep.png" data-alt="Post para processo seletivo do Núcleo" data-cap="Processo seletivo NUSEEP" data-desc="Post para promover o processo seletivo do núcleo."><img src="image/design_nuseep.png" width="1000" height="1500" loading="lazy" decoding="async" alt="Post para promover o processo seletivo do núcleo" style="object-position:50% 40%"></div>
+            <div class="pslide" data-type="design" data-src="image/design_sc.png" data-alt="Design para apresentação do esporte para seguidores novos" data-cap="Apresentação do esporte" data-desc="Retrato de grupo do time inteiro, com a rede ao fundo."><img class="fg" src="image/design_sc.png" width="1500" height="1000" loading="lazy" decoding="async" alt="Foto do time de vôlei reunido na quadra, com a rede ao fundo"></div>
+            <div class="pslide" data-type="design" data-src="image/design_sc2.png" data-alt="Posst para aquisição de novos patrocinadores" data-cap="Propaganda para aquisição de patrocinio" data-desc="Design com foco em atrair patrocinhos novos para o clube."><img src="image/design_sc2.png" width="1000" height="1500" loading="lazy" decoding="async" alt="Jogadora em pé na quadra, olhando para o lado" style="object-position:50% 38%"></div>
+            <div class="pslide" data-type="design" data-src="image/design_dia_da_mulher.png" data-alt="Ação para promover o dia da mulher" data-cap="Dia das mulheres" data-desc="Ação para celebrar o dia das mulheres."><img src="image/design_dia_da_mulher.png" width="1000" height="1500" loading="lazy" decoding="async" alt="Ação para celebrar o dia das mulheres." style="object-position:50% 62%"></div>
+            <div class="pslide" data-type="design" data-src="image/design_nuseep.png" data-alt="Post para processo seletivo do Núcleo" data-cap="Processo seletivo NUSEEP" data-desc="Post para promover o processo seletivo do núcleo."><img src="image/design_nuseep.png" width="1000" height="1500" loading="lazy" decoding="async" alt="Post para promover o processo seletivo do núcleo" style="object-position:50% 40%"></div>
           </div>
           <span class="pcount" aria-hidden="true">1/4</span>
           <button class="parr prev" type="button" aria-label="Anterior" hidden>&lsaquo;</button>
@@ -407,7 +499,7 @@
       <div>
         <h4>Contato</h4>
         <a class="l" href="https://wa.me/5579996889650" target="_blank" rel="noopener">WhatsApp: (79) 99688-9650</a>
-        <a class="l" href="https://www.instagram.com/by.larybarros?utm_source=ig_web_button_share_sheet&amp;rpxt=ZDNlZDc0MzIxNw==">@ByLarybarros</a>
+        <a class="l" href="https://www.instagram.com/by.larybarros?utm_source=ig_web_button_share_sheet&amp;rpxt=ZDNlZDc0MzIxNw==">Instagram: @ByLarybarros</a>
       </div>
       <div>
         <h4>Redes sociais</h4>
